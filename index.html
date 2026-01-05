@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thiệp sinh nhật</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Third‑party libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+    <!-- Countdown Container -->
+    <div id="countdown-container" style="text-align: center; z-index: 20;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem; color: var(--color-primary);">Sắp đến sinh nhật rồi!</h1>
+        <div id="countdown" style="font-size: 4rem; font-weight: bold; font-family: monospace; color: #333;">00:00:00
+        </div>
+    </div>
+
+    <!-- Heart container (SVG will be injected by heart.js) - Initially Hidden via CSS or JS -->
+    <div id="heart-container" style="display: none;"></div>
+
+    <!-- Message area for typed wishes -->
+    <div id="message" class="hidden"></div>
+
+    <!-- Dancing Meme Container -->
+    <div id="meme-container" class="hidden" style="text-align: center; margin-top: 2rem; z-index: 10;">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZtYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NzN0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3V0lsGtTMSB5YNgc/giphy.gif"
+            alt="Dancing Meme" style="width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    </div>
+
+    <!-- Modal for optional photo/video -->
+    <div id="media-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <img src="https://images.unsplash.com/photo-1530103862676-de3c9a59af38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Birthday Celebration" class="modal-media"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block'" />
+            <div style="display:none; padding:2rem; text-align:center;">
+                <h3>Chúc mừng sinh nhật!</h3>
+                <p>Hú hú hú hú </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dark‑mode toggle -->
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
