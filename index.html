@@ -15,10 +15,9 @@
 
 <body>
     <!-- Countdown Container -->
-    <div id="countdown-container" style="text-align: center; z-index: 20;">
-        <h1 style="font-size: 3rem; margin-bottom: 1rem; color: var(--color-primary);">Sắp đến sinh nhật rồi!</h1>
-        <div id="countdown" style="font-size: 4rem; font-weight: bold; font-family: monospace; color: #333;">00:00:00
-        </div>
+    <div id="countdown-container" class="countdown-container">
+        <h1 class="countdown-title">Sắp đến sinh nhật rồi!</h1>
+        <div id="countdown" class="countdown-timer">00:00:00</div>
     </div>
 
     <!-- Heart container (SVG will be injected by heart.js) - Initially Hidden via CSS or JS -->
@@ -28,9 +27,9 @@
     <div id="message" class="hidden"></div>
 
     <!-- Dancing Meme Container -->
-    <div id="meme-container" class="hidden" style="text-align: center; margin-top: 2rem; z-index: 10;">
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZtYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NzN0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3V0lsGtTMSB5YNgc/giphy.gif"
-            alt="Dancing Meme" style="width: 300px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    <div id="meme-container" class="meme-container hidden">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ZtYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NnhsYXc1OGV4d3Y0NzN0ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3V0lsGtTMSB5YNgc/giphy.gif"
+            alt="Dancing Meme" class="meme-img">
     </div>
 
     <!-- Modal for optional photo/video -->
